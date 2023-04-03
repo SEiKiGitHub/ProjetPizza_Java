@@ -31,4 +31,8 @@ public class Commande {
         public void set Client(Client b){
         listClient = b;
         }
+    
+    public Commande (int a){
+        numero = a;
+    }
 }

@@ -31,5 +31,7 @@ public class Livreur {
      * 
      */
     public Pizzeria pizzeria;
-
+        public void set Pizzeria(Pizzeria a){
+        pizzeria = a;
+        }
 }

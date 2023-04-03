@@ -1,4 +1,4 @@
-
+package Model;
 import java.util.*;
 
 /**
@@ -26,20 +26,16 @@ public class Pizzeria {
      * 
      */
     public Vector<Client> listClient = new Vector<Client>();
+   
     
-        public 
-
-    /**
-     * 
-     */
     public Vector<Pizza> listPizza = new Vector<Pizza>();
 
  
-    public Set<Ingredient> listIngredient;
+    public Vcetor<Ingredient> listIngredient = new Vector<Ingredient>();
 
 
     
-    public Set<Livreur> listLivreur;
+    public Vector<Livreur> listLivreur = new Vector<Livreur>();
     
        public Pizzeria (String a, String b){
         nom = a;

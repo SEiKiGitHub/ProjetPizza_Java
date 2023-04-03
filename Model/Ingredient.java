@@ -25,11 +25,11 @@ public class Ingredient {
     /**
      * 
      */
-    public Set<Pizza> listPizza;
+    public Vector<Pizza> listPizza = new Vector<Pizza>();
 
     /**
      * 
      */
-    public Set<Pizzeria> pizzeria;
+    public Vector<Pizzeria> pizzeria = new Vector<Pizzeria>();
 
 }

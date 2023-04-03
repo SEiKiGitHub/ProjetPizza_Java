@@ -42,4 +42,13 @@ public class Client {
         solde = b;
         nbPizzaAchete = c;
     }
+    
+    public void ClientPizzeria(Pizzeria a){
+   pizzeria.add(a);
+}
+    
+    public void CommandeClient(Commande b){
+   listCommande.add(b);
+}
+    
 }

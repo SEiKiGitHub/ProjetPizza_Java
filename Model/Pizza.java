@@ -28,14 +28,8 @@ public class Pizza {
     
     public Vector<Ingredient> listIngredient = new Vector<Ingredient>();
 
-    /**
-     * 
-     */
-    public Set<Pizzeria> pizzeria;
+    public Vector<Pizzeria> pizzeria = new Vector<Pizzeria>();
 
-    /**
-     * 
-     */
-    public Set<LigneCommande> pizzaCom;
+    public Vector<LigneCommande> pizzaCom = new Vector<LigneCommande>();
 
 }

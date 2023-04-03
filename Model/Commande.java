@@ -35,4 +35,16 @@ public class Commande {
     public Commande (int a){
         numero = a;
     }
+    
+   public void CommandeParClient(Client a){
+   listClient.add(a);
+}
+    
+    public void CommandeAssigneeLivreur(Livreur b){
+   listLivreur.add(b);
+}
+    
+    public void LigneCommandeParCommande(LigneCommande c){
+   listLigneCommande.add(c);
+}
 }

@@ -41,4 +41,8 @@ public class Pizzeria {
         adresse = b;
     }
     
+    public void addPizza(Pizza a){
+        listPizza.add(a);
+    }
+    
 }

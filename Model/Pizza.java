@@ -32,7 +32,7 @@ public class Pizza {
 
     public Vector<LigneCommande> pizzaCom = new Vector<LigneCommande>();
     
-    public Pizza (String a, String b){
+    public Pizza (String a, float b){
         nom = a;
         prix = b;
     }

@@ -36,5 +36,14 @@ public class Pizza {
         nom = a;
         prix = b;
     }
-
+    
+   public void pizzaContient(Ingredient a){
+   listingredient.add(a);
+    }
+   public void pizzaProposePizzeria(Pizzeria b){
+   pizzeria.add(b);
+    }
+   public void pizzaDispose(LigneCommande c){
+   pizzaCom.add(c);
+    }
 }

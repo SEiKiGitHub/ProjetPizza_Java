@@ -29,11 +29,9 @@ public class LigneCommande {
         public void set Commande(Commande a){
         appCom = a;
         }
-    /**
-     * 
-     */
+ 
     public Pizza listPizza;
-        public void set Pizza(Pizza a){
-        listPizza = a;
+        public void set Pizza(Pizza b){
+        listPizza = b;
         }
 }

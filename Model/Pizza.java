@@ -38,11 +38,13 @@ public class Pizza {
     }
     
    public void pizzaContient(Ingredient a){
-   listingredient.add(a);
+   listIngredient.add(a);
     }
-   public void pizzaProposePizzeria(Pizzeria b){
+    
+   public void pizzaProposeParPizzeria(Pizzeria b){
    pizzeria.add(b);
     }
+    
    public void pizzaDispose(LigneCommande c){
    pizzaCom.add(c);
     }

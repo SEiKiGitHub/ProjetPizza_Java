@@ -39,4 +39,13 @@ public class LigneCommande {
         quantite = a;
         taille = b;
     }
+    
+   public void commandeClient(Client a){
+   listClient.add(a);
+}
+   public void detientLigneCommande(LigneCommande b){
+   listLigneCommande.add(b);
+}
+   public void assigneLivreur(Livreur c){
+   listeLivreur.add(c);
 }

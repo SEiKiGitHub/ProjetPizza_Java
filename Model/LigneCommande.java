@@ -47,5 +47,5 @@ public class LigneCommande {
    listLigneCommande.add(b);
 }
    public void assigneLivreur(Livreur c){
-   listeLivreur.add(c);
+   listLivreur.add(c);
 }

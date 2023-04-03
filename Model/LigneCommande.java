@@ -34,4 +34,9 @@ public class LigneCommande {
         public void set Pizza(Pizza b){
         listPizza = b;
         }
+    
+    public LigneCommande (int a, int b){
+        quantite = a;
+        taille = b;
+    }
 }

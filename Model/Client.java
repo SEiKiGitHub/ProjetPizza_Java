@@ -1,4 +1,4 @@
-
+package Model;
 import java.util.*;
 
 /**
@@ -30,11 +30,10 @@ public class Client {
     /**
      * 
      */
-    public Set<Commande> listCommande;
+    public Vector<Commande> listCommande = new Vector<Commande>();
 
-    /**
-     * 
-     */
     public Pizzeria pizzeria;
-
+        public void set Pizzeria(Pizzeria a){
+        pizzeria = a;
+        }
 }

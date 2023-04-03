@@ -1,4 +1,4 @@
-
+package Model;
 import java.util.*;
 
 /**
@@ -25,12 +25,8 @@ public class Pizza {
     /**
      * 
      */
-    public void Attribute1;
-
-    /**
-     * 
-     */
-    public Set<Ingredient> listIngredient;
+    
+    public Vector<Ingredient> listIngredient = new Vector<Ingredient>();
 
     /**
      * 

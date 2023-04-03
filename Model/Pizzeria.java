@@ -25,21 +25,25 @@ public class Pizzeria {
     /**
      * 
      */
-    public Set<Client> listClient;
+    public Vector<Client> listClient = new Vector<Client>();
+    
+        public 
 
     /**
      * 
      */
-    public Set<Pizza> listPizza;
+    public Vector<Pizza> listPizza = new Vector<Pizza>();
 
-    /**
-     * 
-     */
+ 
     public Set<Ingredient> listIngredient;
 
-    /**
-     * 
-     */
-    public Set<Livreur> listLivreur;
 
+    
+    public Set<Livreur> listLivreur;
+    
+       public Pizzeria (String a, String b){
+        nom = a;
+        adresse = b;
+    }
+    
 }

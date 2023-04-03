@@ -15,7 +15,7 @@ public class Client {
     /**
      * 
      */
-    public int numTel;
+    public int numTelephone;
 
     /**
      * 
@@ -25,7 +25,7 @@ public class Client {
     /**
      * 
      */
-    public int nbrepizzaAchete;
+    public int nbPizzaAchete;
 
     /**
      * 
@@ -36,4 +36,10 @@ public class Client {
         public void set Pizzeria(Pizzeria a){
         pizzeria = a;
         }
+    
+    public Client (int a,  float b, int c){
+        numTelephone = a;
+        solde = b;
+        nbPizzaAchete = c;
+    }
 }

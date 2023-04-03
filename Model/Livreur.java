@@ -35,4 +35,12 @@ public class Livreur {
         nom = a;
         vehicule = b;
     }
+    
+   public void employesPizzeria(Pizzeria a){
+   pizzeria.add(a); 
+    }
+    
+   public void assigneCommande(Commande b){
+   listCommande.add(b);
+   }
 }

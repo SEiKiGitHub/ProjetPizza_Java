@@ -31,4 +31,8 @@ public class Livreur {
         public void set Pizzeria(Pizzeria a){
         pizzeria = a;
         }
+    public Livreur (String a, String b){
+        nom = a;
+        vehicule = b;
+    }
 }

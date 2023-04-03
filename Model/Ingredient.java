@@ -29,4 +29,8 @@ public class Ingredient {
 
     public Vector<Pizzeria> pizzeria = new Vector<Pizzeria>();
 
+    public Ingredient (String a, float b){
+        nom = a;
+        prixIngredient = b;
+    }
 }

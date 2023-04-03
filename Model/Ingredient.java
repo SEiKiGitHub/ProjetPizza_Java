@@ -33,4 +33,11 @@ public class Ingredient {
         nom = a;
         prixIngredient = b;
     }
+    
+   public void receuilliParPizzeria(Pizzeria a){
+   pizzeria.add(a);
+}
+   public void ContenuDansPizza(Pizza b){
+   listPizza.add(b);
+}
 }

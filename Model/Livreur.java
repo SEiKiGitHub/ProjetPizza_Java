@@ -25,7 +25,7 @@ public class Livreur {
     /**
      * 
      */
-    public Set<Commande> listCommande;
+    public Vector<Commande> listCommande = new Vector<Commande>();
 
     /**
      * 

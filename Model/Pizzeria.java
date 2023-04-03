@@ -32,8 +32,7 @@ public class Pizzeria {
 
  
     public Vcetor<Ingredient> listIngredient = new Vector<Ingredient>();
-
-
+    
     
     public Vector<Livreur> listLivreur = new Vector<Livreur>();
     

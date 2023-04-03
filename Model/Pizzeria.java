@@ -45,4 +45,16 @@ public class Pizzeria {
         listPizza.add(a);
     }
     
+    public void emploieLivreur(Livreur b){
+        listLivreur.add(b)
+    }
+    
+     public void recueilIngredients(Ingredient c){
+     listIngredient.add(c)
+    }
+    
+     public void possedeClient (Client d){
+     listClient.add(d)
+    }
+    
 }

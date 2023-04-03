@@ -1,4 +1,4 @@
-
+package Model;
 import java.util.*;
 
 /**
@@ -27,9 +27,6 @@ public class Ingredient {
      */
     public Vector<Pizza> listPizza = new Vector<Pizza>();
 
-    /**
-     * 
-     */
     public Vector<Pizzeria> pizzeria = new Vector<Pizzeria>();
 
 }

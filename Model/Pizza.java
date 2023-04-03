@@ -31,5 +31,10 @@ public class Pizza {
     public Vector<Pizzeria> pizzeria = new Vector<Pizzeria>();
 
     public Vector<LigneCommande> pizzaCom = new Vector<LigneCommande>();
+    
+    public Pizza (String a, String b){
+        nom = a;
+        prix = b;
+    }
 
 }

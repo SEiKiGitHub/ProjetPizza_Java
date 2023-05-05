@@ -1,54 +1,51 @@
 package Model;
 import java.util.*;
 
-/**
- * 
- */
-public class Client {
+class Customer {
+private String name;
+private String phone;
+private String address;
+private int balance;
+private int freePizzas;
 
-    /**
-     * Default constructor
-     */
-    public Client() {
-    }
-
-    /**
-     * 
-     */
-    public int numTelephone;
-
-    /**
-     * 
-     */
-    public float solde;
-
-    /**
-     * 
-     */
-    public int nbPizzaAchete;
-
-    /**
-     * 
-     */
-    public Vector<Commande> listCommande = new Vector<Commande>();
-
-    public Pizzeria pizzeria;
-        public void set Pizzeria(Pizzeria a){
-        pizzeria = a;
-        }
-    
-    public Client (int a,  float b, int c){
-        numTelephone = a;
-        solde = b;
-        nbPizzaAchete = c;
-    }
-    
-    public void ClientPizzeria(Pizzeria a){
-   pizzeria.add(a);
+public Customer(String name, String phone, String address) {
+    this.name = name;
+    this.phone = phone;
+    this.address = address;
+    this.balance = 0;
+    this.freePizzas = 0;
 }
-    
-    public void CommandeClient(Commande b){
-   listCommande.add(b);
+
+public String getName() {
+    return name;
 }
-    
+
+public String getPhone() {
+    return phone;
 }
+
+public String getAddress() {
+    return address;
+}
+
+public int getBalance() {
+    return balance;
+}
+
+public void pay(int amount) {
+    balance -= amount;
+}
+
+public boolean hasFreePizza() {
+    return freePizzas > 0;
+}
+
+public void useFreePizza() {
+    freePizzas--;
+}
+
+public void addFreePizza() {
+    freePizzas++;
+}   
+}
+

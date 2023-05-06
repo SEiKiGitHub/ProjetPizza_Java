@@ -1,51 +1,44 @@
 package Model;
 import java.util.*;
 
-/**
- * 
- */
 public class Pizza {
-
-    /**
-     * Default constructor
-     */
-    public Pizza() {
-    }
-
-    /**
-     * 
-     */
-    public String nom;
-
-    /**
-     * 
-     */
-    public float prix;
-
-    /**
-     * 
-     */
+    private String nom;
+    private String taille;
+    private double prix;
     
-    public Vector<Ingredient> listIngredient = new Vector<Ingredient>();
-
-    public Vector<Pizzeria> pizzeria = new Vector<Pizzeria>();
-
-    public Vector<LigneCommande> pizzaCom = new Vector<LigneCommande>();
-    
-    public Pizza (String a, float b){
-        nom = a;
-        prix = b;
+    public Pizza(String nom, String taille, double prix) {
+        this.nom = nom;
+        this.taille = taille;
+        this.prix = prix;
     }
     
-   public void pizzaContient(Ingredient a){
-   listIngredient.add(a);
+    public String getNom() {
+        return nom;
     }
     
-   public void pizzaProposeParPizzeria(Pizzeria b){
-   pizzeria.add(b);
+    public String getTaille() {
+        return taille;
     }
     
-   public void pizzaDispose(LigneCommande c){
-   pizzaCom.add(c);
+    public double getPrix() {
+        if (taille.equalsIgnoreCase("naine")) {
+            return prix * 0.67; // 1/3 moins cher
+        } else if (taille.equalsIgnoreCase("obese")) {
+            return prix * 1.33; // 1/3 plus cher
+        } else {
+            return prix;
+        }
+    }
+    
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    
+    public void setTaille(String taille) {
+        this.taille = taille;
+    }
+    
+    public void setPrix(double prix) {
+        this.prix = prix;
     }
 }

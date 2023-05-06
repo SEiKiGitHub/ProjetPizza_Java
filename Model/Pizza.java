@@ -23,7 +23,7 @@ public class Pizza {
     public double getPrix() {
         if (taille.equalsIgnoreCase("naine")) {
             return prix * 0.67; // 1/3 moins cher
-        } else if (taille.equalsIgnoreCase("ogre")) {
+        } else if (taille.equalsIgnoreCase("ogresse")) {
             return prix * 1.33; // 1/3 plus cher
         } else {
             return prix;

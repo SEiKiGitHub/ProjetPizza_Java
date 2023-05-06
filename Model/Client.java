@@ -1,68 +1,38 @@
 package Model;
 import java.util.*;
 
-class Customer {
-private String name;
-private String phone;
-private String address;
-private int balance;
-private int freePizzas;
-
-public Customer(String name, String phone, String address) {
-    this.name = name;
-    this.phone = phone;
-    this.address = address;
-    this.balance = 0;
-    this.freePizzas = 0;
-}
-
-public String getName() {
-    return name;
-}
-
-public String getPhone() {
-    return phone;
-}
-
-public String getAddress() {
-    return address;
-}
-
-public int getBalance() {
-    return balance;
-}
-
-public void pay(int amount) {
-    balance -= amount;
-}
-
-public boolean hasFreePizza() {
-    return freePizzas > 0;
-}
-
-public void useFreePizza() {
-    freePizzas--;
-}
-
-public void addFreePizza() {
-    freePizzas++;
-}   
-}
-
-class OrderItem {
-private String name;
-private int quantity;
-
-public OrderItem(String name, int quantity) {
-    this.name = name;
-    this.quantity = quantity;
-}
-
-public String getName() {
-    return name;
-}
-
-public int getQuantity() {
-    return quantity;
-}
+public class Client {
+    private String phoneNumber;
+    private String address;
+    private int numberOfPizzas;
+    
+    public Client(String phoneNumber, String address, int numberOfPizzas) {
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.numberOfPizzas = numberOfPizzas;
+    }
+    
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    
+    public String getAddress() {
+        return address;
+    }
+    
+    public int getNumberOfPizzas() {
+        return numberOfPizzas;
+    }
+    
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    
+    public void setNumberOfPizzas(int numberOfPizzas) {
+        this.numberOfPizzas = numberOfPizzas;
+    }
 }

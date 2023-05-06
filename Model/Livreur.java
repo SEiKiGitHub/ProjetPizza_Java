@@ -1,46 +1,54 @@
 package Model;
 import java.util.*;
+import java.util.Random;
 
-/**
- * 
- */
 public class Livreur {
-
-    /**
-     * Default constructor
-     */
+    private String nom;
+    private Vehicule vehicule;
+    private Commande commande;
+    
     public Livreur() {
-    }
-
-    /**
-     * 
-     */
-    public String nom;
-
-    /**
-     * 
-     */
-    public String vehicule;
-
-    /**
-     * 
-     */
-    public Vector<Commande> listCommande = new Vector<Commande>();
-
-    public Pizzeria pizzeria;
-        public void set Pizzeria(Pizzeria a){
-        pizzeria = a;
-        }
-    public Livreur (String a, String b){
-        nom = a;
-        vehicule = b;
+        this.nom = generateRandomName();
+        this.vehicule = generateRandomVehicle();
+        this.commande = null;
     }
     
-   public void employesPizzeria(Pizzeria a){
-   pizzeria.add(a); 
+    private String generateRandomName() {
+        Random rand = new Random();
+        String[] noms = {"Jean", "Luc", "Pierre", "Julie", "Marie", "Samantha", "Francois", "David"};
+        int randomIndex = rand.nextInt(noms.length);
+        return noms[randomIndex];
     }
     
-   public void assigneCommande(Commande b){
-   listCommande.add(b);
-   }
+    private Vehicule generateRandomVehicle() {
+        Random rand = new Random();
+        String[] types = {"Voiture", "Moto"};
+        int randomIndex = rand.nextInt(types.length);
+        String type = types[randomIndex];
+        return new Vehicule(type);
+    }
+    
+    public String getNom() {
+        return nom;
+    }
+    
+    public Vehicule getVehicule() {
+        return vehicule;
+    }
+    
+    public Commande getCommande() {
+        return commande;
+    }
+    
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    
+    public void setVehicule(Vehicule vehicule) {
+        this.vehicule = vehicule;
+    }
+    
+    public void setCommande(Commande commande) {
+        this.commande = commande;
+    }
 }

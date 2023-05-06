@@ -8,8 +8,6 @@ private String address;
 private int balance;
 private int freePizzas;
 
-typescript
-Copy code
 public Customer(String name, String phone, String address) {
     this.name = name;
     this.phone = phone;
@@ -55,8 +53,6 @@ class OrderItem {
 private String name;
 private int quantity;
 
-arduino
-Copy code
 public OrderItem(String name, int quantity) {
     this.name = name;
     this.quantity = quantity;

@@ -1,51 +1,28 @@
 package Model;
 import java.util.*;
 
-/**
- * 
- */
 public class LigneCommande {
-
-    /**
-     * Default constructor
-     */
-    public LigneCommande() {
-    }
-
-    /**
-     * 
-     */
-    public int quantite;
-
-    /**
-     * 
-     */
-    public int taille;
-
-    /**
-     * 
-     */
-    public Commande appCom;
-        public void set Commande(Commande a){
-        appCom = a;
-        }
- 
-    public Pizza listPizza;
-        public void set Pizza(Pizza b){
-        listPizza = b;
-        }
+    private String taille;
+    private int quantite;
     
-    public LigneCommande (int a, int b){
-        quantite = a;
-        taille = b;
+    public LigneCommande(String taille, int quantite) {
+        this.taille = taille;
+        this.quantite = quantite;
     }
     
-   public void commandeClient(Client a){
-   listClient.add(a);
-}
-   public void detientLigneCommande(LigneCommande b){
-   listLigneCommande.add(b);
-}
-   public void assigneLivreur(Livreur c){
-   listLivreur.add(c);
+    public String getTaille() {
+        return taille;
+    }
+    
+    public int getQuantite() {
+        return quantite;
+    }
+    
+    public void setTaille(String taille) {
+        this.taille = taille;
+    }
+    
+    public void setQuantite(int quantite) {
+        this.quantite = quantite;
+    }
 }

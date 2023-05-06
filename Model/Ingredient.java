@@ -1,43 +1,33 @@
 package Model;
 import java.util.*;
 
-/**
- * 
- */
 public class Ingredient {
-
-    /**
-     * Default constructor
-     */
-    public Ingredient() {
-    }
-
-    /**
-     * 
-     */
-    public String nom;
-
-    /**
-     * 
-     */
-    public float prixIngredient;
-
-    /**
-     * 
-     */
-    public Vector<Pizza> listPizza = new Vector<Pizza>();
-
-    public Vector<Pizzeria> pizzeria = new Vector<Pizzeria>();
-
-    public Ingredient (String a, float b){
-        nom = a;
-        prixIngredient = b;
+    private String nom;
+    private double prix;
+    
+    public Ingredient(String nom, double prix) {
+        this.nom = nom;
+        this.prix = prix;
     }
     
-   public void receuilliParPizzeria(Pizzeria a){
-   pizzeria.add(a);
+    public String getNom() {
+        return nom;
+    }
+    
+    public double getPrix() {
+        return prix;
+    }
+    
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    
+    public void setPrix(double prix) {
+        this.prix = prix;
+    }
 }
-   public void ContenuDansPizza(Pizza b){
-   listPizza.add(b);
-}
-}
+Ingredient mozzarella = new Ingredient("Mozzarella", 1.5);
+Ingredient tomate = new Ingredient("Tomate", 0.8);
+Ingredient champignons = new Ingredient("Champignons", 1.2);
+Ingredient jambon = new Ingredient("Jambon", 2.0);
+

@@ -1,50 +1,44 @@
 package Model;
 import java.util.*;
+import java.util.Random;
 
-/**
- * 
- */
 public class Commande {
-
-    /**
-     * Default constructor
-     */
-    public Commande() {
-    }
-
-    /**
-     * 
-     */
-    public int numero;
-
-    /**
-     * 
-     */
-    public Vector<LigneCommande> listLignCommande = new Vector<LigneCommande>();
-
-    public Livreur livreur;
-        public void set Livreur(Livreur a){
-        livreur = a;
-        }
+    private int numero;
+    private Client client;
+    private Pizzeria pizzeria;
     
-    public Client listClient;
-        public void set Client(Client b){
-        listClient = b;
-        }
-    
-    public Commande (int a){
-        numero = a;
+    public Commande(Client client, Pizzeria pizzeria) {
+        this.numero = generateRandomNumber();
+        this.client = client;
+        this.pizzeria = pizzeria;
     }
     
-   public void CommandeParClient(Client a){
-   listClient.add(a);
-}
+    private int generateRandomNumber() {
+        Random rand = new Random();
+        return rand.nextInt(100000);
+    }
     
-    public void CommandeAssigneeLivreur(Livreur b){
-   listLivreur.add(b);
-}
+    public int getNumero() {
+        return numero;
+    }
     
-    public void LigneCommandeParCommande(LigneCommande c){
-   listLigneCommande.add(c);
-}
+    public Client getClient() {
+        return client;
+    }
+    
+    public Pizzeria getPizzeria() {
+        return pizzeria;
+    }
+    
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+    
+    public void setClient(Client client) {
+        this.client = client;
+    }
+    
+    public void setPizzeria(Pizzeria pizzeria) {
+        this.pizzeria = pizzeria;
+    }
 }

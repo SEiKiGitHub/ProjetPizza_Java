@@ -9,7 +9,7 @@ public class Pizzeria {
     private List<Client> clients;
     
     public Pizzeria(String name) {
-        this.name = name;
+        this.name = "RaPizza";
         this.address = generateRandomAddress();
         this.clients = new ArrayList<Client>();
     }

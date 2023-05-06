@@ -1,60 +1,57 @@
 package Model;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
-/**
- * 
- */
 public class Pizzeria {
-
-    /**
-     * Default constructor
-     */
-    public Pizzeria() {
-    }
-
-    /**
-     * 
-     */
-    public String adresse;
-
-    /**
-     * 
-     */
-    public String nom;
-
-    /**
-     * 
-     */
-    public Vector<Client> listClient = new Vector<Client>();
-   
+    private String name;
+    private String address;
+    private List<Client> clients;
     
-    public Vector<Pizza> listPizza = new Vector<Pizza>();
-
- 
-    public Vcetor<Ingredient> listIngredient = new Vector<Ingredient>();
-    
-    
-    public Vector<Livreur> listLivreur = new Vector<Livreur>();
-    
-       public Pizzeria (String a, String b){
-        nom = a;
-        adresse = b;
+    public Pizzeria(String name) {
+        this.name = name;
+        this.address = generateRandomAddress();
+        this.clients = new ArrayList<Client>();
     }
     
-    public void addPizza(Pizza a){
-        listPizza.add(a);
+    private String generateRandomAddress() {
+        String[] streets = {"rue de la Paix", "avenue des Champs-Élysées", "boulevard Haussmann", "rue de Rivoli", "rue Saint-Honoré"};
+        String[] cities = {"Paris", "Lyon", "Marseille", "Toulouse", "Bordeaux"};
+        String[] zipCodes = {"75001", "69001", "13001", "31000", "33000"};
+        
+        Random rand = new Random();
+        String street = streets[rand.nextInt(streets.length)];
+        String city = cities[rand.nextInt(cities.length)];
+        String zipCode = zipCodes[rand.nextInt(zipCodes.length)];
+        
+        return street + ", " + zipCode + " " + city;
     }
     
-    public void emploieLivreur(Livreur b){
-        listLivreur.add(b)
+    public String getName() {
+        return name;
     }
     
-     public void recueilIngredients(Ingredient c){
-     listIngredient.add(c)
+    public String getAddress() {
+        return address;
     }
     
-     public void possedeClient (Client d){
-     listClient.add(d)
+    public List<Client> getClients() {
+        return clients;
     }
     
+    public void addClient(Client client) {
+        clients.add(client);
+    }
+    
+    public void removeClient(Client client) {
+        clients.remove(client);
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }

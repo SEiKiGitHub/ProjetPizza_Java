@@ -1,17 +1,37 @@
 package Model;
 import java.util.*;
+import java.util.ArrayList;
+
 
 public class Client {
     private String phoneNumber;
     private String address;
     private int numberOfPizzas;
     private double prepaidCredit;
+    private ArrayList<Client> ClientList = new ArrayList<>();
     
     public Client(String phoneNumber, String address, int numberOfPizzas, double prepaidCredit) {
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.numberOfPizzas = numberOfPizzas;
         this.prepaidCredit = prepaidCredit;
+    }
+    
+    public Client verifClient(String telephone) {
+        for (Client client : ClientList) {
+            if (client.getPhoneNumber().equals(PhoneNumber)) {
+                return client;
+            }
+        }
+        return null;
+    }
+    
+     public void addClient(Client client) {
+        ClientList.add(client);
+    }
+    
+    public void suppClient(Client client) {
+        ClientList.remove(client);
     }
     
     public String getPhoneNumber() {
